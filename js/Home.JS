@@ -6,6 +6,7 @@ jQuery(function ($) {
 
   swiper();
   owlcarousel();
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
       $("#navmenu").fadeOut();
@@ -13,6 +14,7 @@ jQuery(function ($) {
       $("#navmenu").fadeIn();
     }
   });
+
   $("#divhome").click(function () {
     $("html,body").animate(
       {
@@ -30,6 +32,7 @@ jQuery(function ($) {
       "slow"
     );
   });
+
   $("#divgallery").click(function () {
     $("html,body").animate(
       {
@@ -38,6 +41,7 @@ jQuery(function ($) {
       "slow"
     );
   });
+
   $("#divteam").click(function () {
     $("html,body").animate(
       {
@@ -46,6 +50,7 @@ jQuery(function ($) {
       "slow"
     );
   });
+
   $("#divcontact").click(function () {
     $("html,body").animate(
       {
@@ -54,6 +59,7 @@ jQuery(function ($) {
       "slow"
     );
   });
+
   $("#divplan").click(function () {
     $("html,body").animate(
       {
@@ -80,6 +86,7 @@ function togglenavmenu() {
     $("#navmenu").css("maxHeight", "0px");
   }
 }
+
 function swiper() {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: "3",
@@ -106,6 +113,7 @@ function swiper() {
     // },
   });
 }
+
 function owlcarousel() {
   $(".owl-carousel").owlCarousel({
     loop: true,
