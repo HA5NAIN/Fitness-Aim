@@ -107,10 +107,10 @@ function swiper() {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
   });
 }
 
@@ -119,7 +119,7 @@ function owlcarousel() {
     loop: true,
     margin: 10,
     nav: false,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 2500,
     autoplayHoverPause: true,
     responsive: {
