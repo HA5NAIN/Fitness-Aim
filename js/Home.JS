@@ -1,7 +1,20 @@
 jQuery(function ($) {
-  $("#navmenu").css("maxHeight", "0px");
-  $("#menuicon").on("click", function (e) {
-    togglenavmenu();
+  // $("#navmenu").css("maxHeight", "0px");
+  $(".hamburger").on("click", function (e) {
+    // togglenavmenu();
+    e.preventDefault();
+    $('.nav-bar').toggleClass("active");
+  });
+
+  $(window).on('resize', function () {
+    var screenWidth = $(window).width();
+    var carouselImage = $('#carimg');
+
+    if (screenWidth < 768) {
+      carouselImage.attr('src', 'assets/img/carousel.jpg');  // Change the image source for small screens
+    } else {
+      carouselImage.attr('src', 'assets/img/aim9.jpg');  // Change the image source for medium screens and above
+    }
   });
 
   swiper();
@@ -79,18 +92,13 @@ jQuery(function ($) {
   });
 });
 
-function togglenavmenu() {
-  if ($("#navmenu").css("maxHeight") == "0px") {
-    $("#navmenu").css("maxHeight", "145px");
-  } else {
-    $("#navmenu").css("maxHeight", "0px");
-  }
-}
 
 function swiper() {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: "3",
     spaceBetween: 30,
+    observer: true,
+    observeParents: true,
     breakpoints: {
       // when window width is >= 320px
       320: {

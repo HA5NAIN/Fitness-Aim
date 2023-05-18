@@ -401,7 +401,7 @@ margin: 25px
 
 /* Plan Card */
 .plan-section{
-  max-height: 50vh;
+  max-height: 100%;
   padding: 5vh;
   
 }
@@ -578,33 +578,7 @@ margin: 25px
 h2{
   font-size: 1rem !important;
 }
-.navbar {
-  height: 7vh;
-}
-  nav ul{
-    width: 100%;
-    background-color: #ffcb1e;
-    position: fixed;
-    top: 55px;
-    right: 0px;
-    margin-top: 0;
-    margin-bottom: 0;
-    
-  }
-  nav ul li{
-    width: 100%;
-    display: block;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    float: right;
-    margin-right: 15px;
-   
-  }
-  nav ul li a{
-    color: black;
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
+
   #gallery{
     display: flex;
   }
@@ -724,12 +698,12 @@ h2{
 }
 
 .plan-section{
-  max-height: 102vh;
+  max-height: 100%;
   padding: 3vh;
   
 }
 .card-section{
-  display: block ;
+  display: grid ;
 }
 .card-plan:hover {
   height: 27vh;
@@ -867,8 +841,9 @@ h2{
     padding: 2vh;
     margin: 2.5vh;
   }
-  .team-section{
-    padding: 0px;
+
+  .card-section{
+    display: grid;
   }
   .gallery-section{
    
@@ -933,13 +908,11 @@ h2{
   }
   
   .plan-section{
-    max-height: 105vh;
+    max-height: 100%;
     padding: 3vh;
     
   }
-  .card-section{
-    display: block ;
-  }
+ 
   .card-plan:hover {
     height: 32vh;
     
@@ -1115,10 +1088,6 @@ h1{
   color: #fff;
 } 
 
-.card-section{
-  display: inline-flex
-}
-
 .swiper {
   width: 175vh;
   height: 795px;
@@ -1195,14 +1164,12 @@ transition: 1s;
 } */
 .team-section {
   background-color: #0a0a0a;
-  padding: 1em 27em
 }
 .team-section.team-page {
-	padding-bottom: 70px;
+	
 }
 
 .team-section.team-page .ts-item {
-	margin-bottom: 30px;
 }
 
 .team-section.team-page .ts-item:hover .ts_text {
@@ -1375,7 +1342,7 @@ font-size: 2rem;
 
 /* Plan Card */
 .plan-section{
-  max-height: 50vh;
+  max-height: 100%;
   padding: 5vh;
   
 }
