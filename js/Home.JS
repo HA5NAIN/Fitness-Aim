@@ -1,4 +1,18 @@
+var screenWidth = $(window).width();
+var carouselImage = $('#carimg');
 jQuery(function ($) {
+  $('#loader').modal('show');
+
+  setTimeout(function () {
+    $("#loader").modal('hide')
+  }, 4500);
+
+
+  if (screenWidth < 768) {
+    carouselImage.attr('src', 'assets/img/carousel.jpg');  // Change the image source for small screens
+  } else {
+    carouselImage.attr('src', 'assets/img/aim9.jpg');  // Change the image source for medium screens and above
+  }
   // $("#navmenu").css("maxHeight", "0px");
   $(".hamburger").on("click", function (e) {
     // togglenavmenu();
@@ -7,8 +21,7 @@ jQuery(function ($) {
   });
 
   $(window).on('resize', function () {
-    var screenWidth = $(window).width();
-    var carouselImage = $('#carimg');
+    screenWidth = $(window).width(); carouselImage = $('#carimg');
 
     if (screenWidth < 768) {
       carouselImage.attr('src', 'assets/img/carousel.jpg');  // Change the image source for small screens
@@ -90,6 +103,7 @@ jQuery(function ($) {
       "slow"
     );
   });
+
 });
 
 
